@@ -18,7 +18,7 @@ fi
 # It should be impossible in Beaker.
 if [ -e "/root/RECIPE.TXT" ]; then
     if [[ "$RSTRNT_RECIPEID" != "$(cat /root/RECIPE.TXT)" ]] ; then
-        echo "/root/RECIPE.TXT contents $(cat /root/RECIPE.TXT) does not match \$RSTRNT_RECIPEID $RECIPEID" >>"$OUTPUTFILE"
+        echo "/root/RECIPE.TXT contents $(cat /root/RECIPE.TXT) does not match \$RSTRNT_RECIPEID $RSTRNT_RECIPEID" >>"$OUTPUTFILE"
         echo "Did the installation fail?" >>"$OUTPUTFILE"
         rstrnt-report-result -o "$OUTPUTFILE" Recipe-ID-mismatch FAIL
         rstrnt-abort recipe
@@ -31,12 +31,12 @@ fi
 # Populate /etc/motd with a notice and some extra useful information.
 echo "**  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **" >/etc/motd
 echo "  This system is part of Beaker. It was provisioned for:              " >>/etc/motd
-echo "    $BEAKER/recipes/$RECIPEID                                         " >>/etc/motd
+echo "    $BEAKER/recipes/$RSTRNT_RECIPEID                                  " >>/etc/motd
 echo "                                                                      " >>/etc/motd
 echo "  Beaker test information:                                            " >>/etc/motd
 echo "                            JOBID=$RSTRNT_JOBID                       " >>/etc/motd
 echo "                        SUBMITTER=$RSTRNT_OWNER                       " >>/etc/motd
-echo "                         RECIPEID=$RECIPEID                           " >>/etc/motd
+echo "                         RECIPEID=$RSTRNT_RECIPEID                    " >>/etc/motd
 echo "                           DISTRO=$RSTRNT_OSDISTRO                    " >>/etc/motd
 echo "                                                                      " >>/etc/motd
 echo "  Job whiteboard: $BEAKER_JOB_WHITEBOARD                              " >>/etc/motd
