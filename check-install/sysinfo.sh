@@ -5,7 +5,7 @@ hostname -f
 echo "********** uname -a ***************************************"
 uname -a
 echo "********** Potential kernel error messages ****************"
-grep -P '(?i:error|collision|fail|temperature|command not found)|(BUG|INFO|FATAL|WARNING):' "$TESTPATH"/dmesg.log
+grep -P '(?i:error|collision|fail|temperature|command not found)|(BUG|INFO|FATAL|WARNING):' "$RSTRNT_TASKPATH"/dmesg.log
 if [ -e /etc/os-release ] ; then
     echo "********** /etc/os-release ********************************"
     cat /etc/os-release

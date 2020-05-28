@@ -34,11 +34,10 @@ echo "  This system is part of Beaker. It was provisioned for:              " >>
 echo "    $BEAKER/recipes/$RECIPEID                                         " >>/etc/motd
 echo "                                                                      " >>/etc/motd
 echo "  Beaker test information:                                            " >>/etc/motd
-echo "                            JOBID=$JOBID                              " >>/etc/motd
-echo "                        SUBMITTER=$SUBMITTER                          " >>/etc/motd
+echo "                            JOBID=$RSTRNT_JOBID                       " >>/etc/motd
+echo "                        SUBMITTER=$RSTRNT_OWNER                       " >>/etc/motd
 echo "                         RECIPEID=$RECIPEID                           " >>/etc/motd
-echo "                           DISTRO=$DISTRO                             " >>/etc/motd
-echo "                           DISTRO=$DISTRO                             " >>/etc/motd
+echo "                           DISTRO=$RSTRNT_OSDISTRO                    " >>/etc/motd
 echo "                                                                      " >>/etc/motd
 echo "  Job whiteboard: $BEAKER_JOB_WHITEBOARD                              " >>/etc/motd
 echo "                                                                      " >>/etc/motd
