@@ -49,4 +49,4 @@ rstrnt-report-result -o "$OUTPUTFILE" "$TEST" PASS "$SCORE"
 
 # Collect some rudimentary information about the installed system and report it back.
 ./sysinfo.sh 2>&1 >"$RSTRNT_TASKPATH"/sysinfo.log
-rstrnt-report-result -o "$OUTPUTFILE" $TEST/Sysinfo PASS "$RSTRNT_TASKPATH"/sysinfo.log
+rstrnt-report-result -o "$RSTRNT_TASKPATH"/sysinfo.log $TEST/Sysinfo PASS
