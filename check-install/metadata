@@ -1,0 +1,10 @@
+[General]
+description=check-install
+owner=Martin Styk <mastyk@redhat.com>
+license=MIT
+confidential=no
+destructive=no
+
+[restraint]
+entry_point=./runtest.sh
+max_time=10m
