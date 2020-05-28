@@ -8,7 +8,7 @@ dmesg >"$RSTRNT_TASKPATH"/dmesg.log
 # Make this more RHTS because it is like plague
 export TEST=/distribution/check-install
 if [ -z "$OUTPUTFILE" ]; then
-        OUTPUTFILE="$(mktemp /mnt/testarea/tmp.XXXXXX)"
+        OUTPUTFILE="$(mktemp /tmp/tmp.XXXXXX)"
         export OUTPUTFILE
 fi
 
