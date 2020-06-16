@@ -17,6 +17,7 @@ $(METADATA):
 	@echo "Path:         $(TEST_DIR)" >>$(METADATA)
 	@echo "TestVersion:  $(TESTVERSION)" >>$(METADATA)
 	@echo "License:      GPL-2" >>$(METADATA)
+	@echo "Owner:		 Martin Styk <mastyk@redhat.com>" >>$(METADATA)
 	@echo "Description:  Checks the installation that was done, reports system info" >>$(METADATA)
 	@echo "TestTime:     10m" >>$(METADATA)
 	rhts-lint $(METADATA)
