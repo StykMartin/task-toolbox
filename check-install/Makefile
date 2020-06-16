@@ -6,7 +6,7 @@ export TESTVERSION=1.0
 include /usr/share/rhts/lib/rhts-make.include
 
 BUILT_FILES=
-FILES=$(METADATA) sysinfo.sh runtest.sh
+FILES=$(METADATA) sysinfo.sh runtest.sh metadata
 
 .PHONY: run
 run:
